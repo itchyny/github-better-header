@@ -1,0 +1,11 @@
+{
+  "manifest_version": 2,
+  "name": "GitHub Header",
+  "version": "0.0",
+  "author": "itchyny",
+  "content_scripts": [ {
+    "all_frames": false,
+    "js": [ "github-header.js" ],
+    "matches": [ "https://github.com/*" ]
+  } ]
+}
