@@ -5,7 +5,7 @@
   "author": "itchyny",
   "content_scripts": [ {
     "all_frames": false,
-    "js": [ "github-header.js" ],
+    "js": [ "github-better-header.js" ],
     "run_at": "document_start",
     "matches": [ "https://github.com/*" ]
   } ],
