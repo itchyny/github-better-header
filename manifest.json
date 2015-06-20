@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "GitHub Header",
+  "name": "GitHub Better Header",
   "version": "0.0",
   "author": "itchyny",
   "content_scripts": [ {
