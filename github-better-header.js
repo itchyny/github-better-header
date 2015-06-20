@@ -95,7 +95,8 @@
       },
       {
         className: 'header-nav user-nav right',
-        fileName: 'header-nav-right.html'
+        fileName: 'header-nav-right.html',
+        when: 'user'
       }
     ],
     variables: [
