@@ -13,3 +13,6 @@
 ## Installation
 - Clone this repository
 - Click Load unpacked extension button in the chrome://extensions/.
+
+## Author
+itchyny (https://github.com/itchyny)
