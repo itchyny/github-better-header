@@ -114,7 +114,8 @@
       {
         title: 'authenticity_token',
         name: 'authenticity_token',
-        attribute: 'value'
+        attribute: 'value',
+        when: 'user'
       }
     ]
   });
