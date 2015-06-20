@@ -7,5 +7,6 @@
     "all_frames": false,
     "js": [ "github-header.js" ],
     "matches": [ "https://github.com/*" ]
-  } ]
+  } ],
+  "web_accessible_resources": [ "*.html" ]
 }
