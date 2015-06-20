@@ -1,0 +1,61 @@
+<ul class="github-header header-nav user-nav right" id="user-links">
+  <li class="header-nav-item">
+    <a class="header-nav-link name tooltipped tooltipped-s js-menu-target"
+       href="/{{user}}"
+       aria-label="View profile and more"
+       data-ga-click="Header, go to profile, text:your profile">
+      <img alt="@{{user}}" class="avatar" height="20" src="{{avatar}}" width="20" />
+      <span class="css-truncate">
+        <span class="css-truncate-target">{{user}}</span>
+      </span>
+    </a>
+  </li>
+  <li class="header-nav-item">
+    <span class="js-socket-channel js-updatable-content"
+          data-channel="notification-changed:{{user}}"
+          data-url="/notifications/header">
+      <a href="/notifications" aria-label="You have no unread notifications" class="header-nav-link notification-indicator tooltipped tooltipped-s" data-ga-click="Header, go to notifications, icon:read" data-hotkey="g n">
+        <span class="mail-status all-read"></span>
+        <span class="octicon octicon-inbox"></span>
+      </a>
+    </span>
+  </li>
+  <li class="header-nav-item dropdown js-menu-container">
+    <a class="header-nav-link tooltipped tooltipped-s js-menu-target"
+       href="/new"
+       aria-label="Create new..."
+       data-ga-click="Header, create new, icon:add">
+      <span class="octicon octicon-plus left"></span>
+      <span class="dropdown-caret"></span>
+    </a>
+    <div class="dropdown-menu-content js-menu-content">
+      <ul class="dropdown-menu dropdown-menu-sw">
+        <a class="dropdown-item" href="/new" data-ga-click="Header, create new repository">
+          New repository
+        </a>
+        <a class="dropdown-item" href="/organizations/new" data-ga-click="Header, create new organization">
+          New organization
+        </a>
+      </ul>
+    </div>
+  </li>
+  <li class="header-nav-item">
+    <a class="header-nav-link tooltipped tooltipped-s js-menu-target"
+       href="/settings/profile"
+       aria-label="Settings"
+       data-ga-click="Header, go to settings, icon:settings">
+      <span class="octicon octicon-tools left"></span>
+    </a>
+  </li>
+  <li class="header-nav-item dropdown js-menu-container">
+    <form accept-charset="UTF-8" action="/logout" class="logout-form" method="post">
+      <input name="authenticity_token" type="hidden" value="{{authenticity_token}}" />
+      <button class="header-nav-link tooltipped tooltipped-s"
+              style="border: 0px; background: transparent;"
+              aria-label="Sign out"
+              data-ga-click="Header, sign out, icon:logout">
+        <span class="octicon octicon-log-out left"></span>
+      </button>
+    </form>
+  </li>
+</ul>
