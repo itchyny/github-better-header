@@ -11,20 +11,6 @@
       </span>
     </a>
   </li>
-  <li class="header-nav-item">
-    <span class="js-socket-channel js-updatable-content"
-          data-channel="notification-changed:{{user}}"
-          data-url="/notifications/header">
-      <a href="/notifications"
-         aria-label="You have no unread notifications"
-         class="header-nav-link notification-indicator tooltipped tooltipped-s"
-         data-ga-click="Header, go to notifications, icon:read"
-         data-hotkey="g n">
-        <span class="mail-status all-read"></span>
-        <span class="octicon octicon-inbox"></span>
-      </a>
-    </span>
-  </li>
   <li class="header-nav-item dropdown js-menu-container">
     <a class="header-nav-link tooltipped tooltipped-s js-menu-target"
        href="/new"
@@ -47,6 +33,20 @@
         </a>
       </ul>
     </div>
+  </li>
+  <li class="header-nav-item">
+    <span class="js-socket-channel js-updatable-content"
+          data-channel="notification-changed:{{user}}"
+          data-url="/notifications/header">
+      <a href="/notifications"
+         aria-label="You have no unread notifications"
+         class="header-nav-link notification-indicator tooltipped tooltipped-s"
+         data-ga-click="Header, go to notifications, icon:read"
+         data-hotkey="g n">
+        <span class="mail-status all-read"></span>
+        <span class="octicon octicon-inbox"></span>
+      </a>
+    </span>
   </li>
   <li class="header-nav-item">
     <a class="header-nav-link tooltipped tooltipped-s js-menu-target"
