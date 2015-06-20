@@ -5,4 +5,8 @@
 ## Why?
 - The Pull request and Issues links are welcome.
 - But we miss the profile link in the header.
-- There are some other projects which aims as same, but their scripts are loaded after the contents are loaded. Thus the header gets better after a few hundreds of milliseconds. On the other hand, this extension replaces the elements before the document is loaded.
+- There are some other projects which aim as same as this project, but their scripts are loaded after the contents are loaded. Thus the header gets better after a few hundreds of milliseconds. On the other hand, this extension replaces the elements before the document is loaded.
+
+## Installation
+- Clone this repository
+- Click Load unpacked extension button in the chrome://extensions/.
