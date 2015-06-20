@@ -3,7 +3,8 @@
     <a class="header-nav-link name tooltipped tooltipped-s"
        href="/{{user}}"
        aria-label="View profile and more"
-       data-ga-click="Header, go to profile, text:your profile">
+       data-ga-click="Header, go to profile, text:your profile"
+       data-hotkey="g u">
       <img alt="@{{user}}" class="avatar" height="20" src="{{avatar}}" width="20" />
       <span class="css-truncate">
         <span class="css-truncate-target">{{user}}</span>
@@ -14,7 +15,11 @@
     <span class="js-socket-channel js-updatable-content"
           data-channel="notification-changed:{{user}}"
           data-url="/notifications/header">
-      <a href="/notifications" aria-label="You have no unread notifications" class="header-nav-link notification-indicator tooltipped tooltipped-s" data-ga-click="Header, go to notifications, icon:read" data-hotkey="g n">
+      <a href="/notifications"
+         aria-label="You have no unread notifications"
+         class="header-nav-link notification-indicator tooltipped tooltipped-s"
+         data-ga-click="Header, go to notifications, icon:read"
+         data-hotkey="g n">
         <span class="mail-status all-read"></span>
         <span class="octicon octicon-inbox"></span>
       </a>
@@ -30,10 +35,14 @@
     </a>
     <div class="dropdown-menu-content js-menu-content">
       <ul class="dropdown-menu dropdown-menu-sw">
-        <a class="dropdown-item" href="/new" data-ga-click="Header, create new repository">
+        <a class="dropdown-item"
+           href="/new"
+           data-ga-click="Header, create new repository">
           New repository
         </a>
-        <a class="dropdown-item" href="/organizations/new" data-ga-click="Header, create new organization">
+        <a class="dropdown-item"
+           href="/organizations/new"
+           data-ga-click="Header, create new organization">
           New organization
         </a>
       </ul>
