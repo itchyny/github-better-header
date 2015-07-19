@@ -58,7 +58,7 @@
                 varpromise.then(function(variables) {
                   if (!overwrite.when || variables[overwrite.when]) {
                     node.innerHTML = Object.keys(variables).reduce(function(innerHTML, name) {
-                      return innerHTML.replace(new RegExp(`{{ *${name} *}}`, 'g'), variables[name]);
+                      return innerHTML.replace(new RegExp('{{ *' + name  + ' *}}', 'g'), variables[name]);
                     }, innerHTML);
                   }
                   node.style.display = '';
