@@ -57,7 +57,7 @@
     </a>
   </li>
   <li class="header-nav-item dropdown js-menu-container">
-    <form accept-charset="UTF-8" action="/logout" class="logout-form" method="post">
+    <form accept-charset="UTF-8" action="/logout" class="logout-form" data-form-nonce="{{form_nonce}}" method="post">
       <input name="authenticity_token" type="hidden" value="{{authenticity_token}}" />
       <button class="header-nav-link tooltipped tooltipped-s"
               style="border: 0px; background: transparent;"

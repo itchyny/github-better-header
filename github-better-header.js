@@ -116,6 +116,12 @@
         name: 'authenticity_token',
         attribute: 'value',
         when: 'user'
+      },
+      {
+        title: 'form_nonce',
+        name: 'form-nonce',
+        attribute: 'content',
+        when: 'user'
       }
     ]
   });
