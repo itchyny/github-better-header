@@ -10,7 +10,7 @@
   }
 
   // Promise-like object of gathering variables
-  function variablesPromise(variables) {
+  function variablesPool(variables) {
     var pool = {};
     var values = {};
     var resolved = false;
@@ -38,7 +38,7 @@
 
   // Mutation observer witness with the settings injected
   function witness(setting) {
-    var varpromise = variablesPromise(setting.variables);
+    var varpool = variablesPool(setting.variables);
     var htmlpromise = setting.overwrites.map(function(overwrite) {
       return [ overwrite.fileName, get(chrome.extension.getURL(overwrite.fileName)) ];
     }).reduce(function (o, v) { o[v[0]] = v[1]; return o; }, {});
@@ -50,7 +50,7 @@
             if (!variable.done && node.getAttribute
               && (node.getAttribute('name') === variable.name
               ||  node.className === variable.className)) {
-              varpromise.set(variable.title, node.getAttribute(variable.attribute));
+              varpool.set(variable.title, node.getAttribute(variable.attribute));
               variable.done = true;
             }
           });
@@ -59,7 +59,7 @@
             if (!overwrite.done && node.className === overwrite.className) {
               node.style.display = 'none';
               htmlpromise[overwrite.fileName].then(function(innerHTML) {
-                varpromise.then(function(variables) {
+                varpool.then(function(variables) {
                   if (!overwrite.when || variables[overwrite.when]) {
                     node.innerHTML = Object.keys(variables).reduce(function(innerHTML, name) {
                       return innerHTML.replace(new RegExp('{{ *' + name  + ' *}}', 'g'), variables[name]);
