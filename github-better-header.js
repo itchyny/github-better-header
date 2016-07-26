@@ -9,19 +9,31 @@
     });
   }
 
-  // Promise object of gathering variables
+  // Promise-like object of gathering variables
   function variablesPromise(variables) {
-    var deferred = Promise.defer();
+    var pool = {};
     var values = {};
-    deferred.promise.set = function(name, value) {
+    var resolved = false;
+    var callbacks = [];
+    pool.set = function(name, value) {
       values[name] = value;
       if (Object.keys(values).length === variables.filter(function(v) {
         return !v.when || values.hasOwnProperty(v.when) && values[v.when];
       }).length) {
-        deferred.resolve(values);
+        resolved = true;
+        callbacks.forEach(function(callback) {
+          callback(values);
+        });
       }
     };
-    return deferred.promise;
+    pool.then = function(callback) {
+      if (resolved) {
+        callback(values);
+      } else {
+        callbacks.push(callback);
+      }
+    };
+    return pool;
   }
 
   // Mutation observer witness with the settings injected
