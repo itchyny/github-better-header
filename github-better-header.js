@@ -2,19 +2,11 @@
 
   // Promise object of retrieving a web resource
   function get(url) {
-    var deferred = Promise.defer();
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', url);
-    xhr.onload = function() {
-      if (xhr.status === 200) {
-        deferred.resolve(xhr.response);
-      } else {
-        deferred.reject(new Error(xhr.statusText));
-      }
-    };
-    xhr.onerror = deferred.reject;
-    xhr.send();
-    return deferred.promise;
+    return new Promise(function(resolve, reject) {
+      fetch(url).then(function(response) {
+        return response.text();
+      }).then(resolve);
+    });
   }
 
   // Promise object of gathering variables
