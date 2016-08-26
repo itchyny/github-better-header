@@ -1,14 +1,5 @@
 ;(function() {
 
-  // Promise object of retrieving a web resource
-  function get(url) {
-    return new Promise(function(resolve, reject) {
-      fetch(url).then(function(response) {
-        return response.text();
-      }).then(resolve);
-    });
-  }
-
   // Promise-like object of gathering variables
   function variablesPool(variables) {
     var pool = {};
@@ -40,7 +31,7 @@
   function witness(setting) {
     var varpool = variablesPool(setting.variables);
     var htmlpromise = setting.overwrites.map(function(overwrite) {
-      return [ overwrite.fileName, get(chrome.extension.getURL(overwrite.fileName)) ];
+      return [ overwrite.fileName, fetch(chrome.extension.getURL(overwrite.fileName)).then(function(response) { return response.text(); }) ];
     }).reduce(function (o, v) { o[v[0]] = v[1]; return o; }, {});
     return function(mutations) {
       [].forEach.call(mutations, function(mutation) {
