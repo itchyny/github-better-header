@@ -84,12 +84,12 @@
     config: { childList: true, subtree: true },
     overwrites: [
       {
-        className: 'header-nav left',
+        className: 'header-nav float-left',
         fileName: 'header-nav-left.html',
         when: 'user'
       },
       {
-        className: 'header-nav user-nav right',
+        className: 'header-nav user-nav float-right',
         fileName: 'header-nav-right.html',
         when: 'user'
       }
