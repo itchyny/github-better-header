@@ -114,7 +114,7 @@
       },
       {
         title: 'form_nonce',
-        name: 'form-nonce',
+        name: 'html-safe-nonce',
         attribute: 'content',
         when: 'user'
       }
