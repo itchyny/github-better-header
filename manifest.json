@@ -6,6 +6,7 @@
   "content_scripts": [ {
     "all_frames": false,
     "js": [ "github-better-header.js" ],
+    "css": [ "style.css" ],
     "run_at": "document_start",
     "matches": [ "https://github.com/*" ]
   } ],
