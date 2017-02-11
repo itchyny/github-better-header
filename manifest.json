@@ -8,7 +8,7 @@
     "js": [ "github-better-header.js" ],
     "css": [ "style.css" ],
     "run_at": "document_start",
-    "matches": [ "https://github.com/*" ]
+    "matches": [ "https://github.com/*", "https://gist.github.com/*" ]
   } ],
   "web_accessible_resources": [ "*.html" ]
 }
