@@ -62,6 +62,14 @@
               overwrite.done = true;
             }
           });
+          setting.rewriteClass.forEach(function(config) {
+            if (!config.done && node.className && node.className.indexOf(config.className) >= 0) {
+              if (config.removeClassName !== undefined) {
+                node.classList.remove(config.removeClassName);
+                config.done = true;
+              }
+            }
+          });
         });
       });
       // if all things done, stop observation
@@ -92,6 +100,12 @@
         className: 'header-nav user-nav float-right',
         fileName: 'header-nav-right.html',
         when: 'user'
+      }
+    ],
+    rewriteClass: [
+      {
+        className: 'header header-dark',
+        removeClassName: 'header-dark'
       }
     ],
     variables: [
