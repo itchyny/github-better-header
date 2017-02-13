@@ -104,7 +104,7 @@
     ],
     rewriteClass: [
       {
-        className: 'header header-dark',
+        className: 'header-dark',
         removeClassName: 'header-dark'
       }
     ],
