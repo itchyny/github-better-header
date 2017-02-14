@@ -1,5 +1,6 @@
 .header {
   background-color: #f5f5f5!important;
+  border-bottom: 1px solid #e5e5e5!important;
 }
 
 .header .header-logo-invertocat, .header .header-logo-wordmark, .header .header-nav-link {
