@@ -20,6 +20,7 @@
 
 .header .header-search-input {
   box-shadow: none!important;
+  min-height: 26px!important;
 }
 
 .form-control.focus {
