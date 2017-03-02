@@ -35,6 +35,26 @@ html .branch-action-state-clean .branch-action-body::before {
   border-right-color: #95c97e;
 }
 
+html .block-diff-added, html .text-green .block-diff-neutral {
+  background-color: #55a532;
+}
+
+html .text-green {
+  color: #55a532!important;
+}
+
+html .block-diff-deleted, html .text-red .block-diff-neutral {
+  background-color: #bd2c00;
+}
+
+html .text-red {
+  color: #bd2c00!important;
+}
+
+html .reponav-item.selected {
+  border-color: #d26911 #e5e5e5 transparent;
+}
+
 .header {
   background-color: #f5f5f5!important;
   border-bottom: 1px solid #e5e5e5!important;
