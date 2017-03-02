@@ -16,10 +16,14 @@ html body .btn-primary {
   border: 1px solid #5aad35;
 }
 
+html body .BtnGroup-item {
+  border-right-width: 0;
+}
+
 html body .btn-primary:hover, html body .btn-primary:active {
   background-color: #55a532;
   background-image: linear-gradient(#85d063, #4f992f);
-  border-color: #519d30;
+  border: 1px solid #519d30;
   background-position: 0 0;
 }
 
