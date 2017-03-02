@@ -1,3 +1,11 @@
+html a {
+  color: #4078c0;
+}
+
+html .link-gray-dark:hover {
+  color: #4078c0!important;
+}
+
 .header {
   background-color: #f5f5f5!important;
   border-bottom: 1px solid #e5e5e5!important;
