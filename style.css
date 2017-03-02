@@ -1,4 +1,4 @@
-html a {
+html a, html .btn-link {
   color: #4078c0;
 }
 
