@@ -92,3 +92,7 @@ html .reponav-item.selected {
 input.form-control::-webkit-input-placeholder {
   color: #767676!important;
 }
+
+.header .header-nav-link:hover .dropdown-caret, .header .header-nav-link:focus .dropdown-caret {
+    border-top-color: #222222;
+}
