@@ -51,7 +51,7 @@
               node.style.display = 'none';
               htmlpromise[overwrite.fileName].then(function(innerHTML) {
                 varpool.then(function(variables) {
-                  if (!overwrite.when || variables[overwrite.when]) {
+                  if (!overwrite.when || overwrite.when.split(',').every(x => x.match('^(.*)=(.*)$') ? variables[RegExp.$1] === RegExp.$2 : variables[x])) {
                     node.innerHTML = Object.keys(variables).reduce(function(innerHTML, name) {
                       return innerHTML.replace(new RegExp('{{ *' + name  + ' *}}', 'g'), variables[name]);
                     }, innerHTML);
@@ -86,15 +86,20 @@
       {
         className: 'header-nav float-left',
         fileName: 'header-nav-left.html',
-        when: 'user'
+        when: 'user,hostname=github.com'
       },
       {
         className: 'header-nav user-nav float-right',
         fileName: 'header-nav-right.html',
-        when: 'user'
+        when: 'user,hostname=github.com'
       }
     ],
     variables: [
+      {
+        title: 'hostname',
+        name: 'hostname',
+        attribute: 'content'
+      },
       {
         title: 'user',
         name: 'user-login',
