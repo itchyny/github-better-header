@@ -2,6 +2,10 @@ html a, html .btn-link {
   color: #4078c0;
 }
 
+html .btn-link.add-line-comment {
+  color: #ffffff;
+}
+
 html .link-gray-dark:hover {
   color: #4078c0!important;
 }
