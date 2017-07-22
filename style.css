@@ -122,3 +122,11 @@ input.form-control::-webkit-input-placeholder {
 .github-header .header-nav-item:first-child {
   margin-left: 15px!important;
 }
+
+.github-header .header-nav-item.create-new {
+  padding-top: 2px!important;
+}
+
+.github-header .header-nav-item.create-new a:hover {
+  text-decoration: none!important;
+}
