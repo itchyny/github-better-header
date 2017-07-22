@@ -47,7 +47,7 @@
           });
           // then check whether or not we overwrite the element
           setting.overwrites.forEach(function(overwrite) {
-            if (!overwrite.done && node.className === overwrite.className) {
+            if (!overwrite.done && node.className && node.className.toString().indexOf(overwrite.className) >= 0) {
               node.style.display = 'none';
               htmlpromise[overwrite.fileName].then(function(innerHTML) {
                 varpool.then(function(variables) {
@@ -84,13 +84,8 @@
     config: { childList: true, subtree: true },
     overwrites: [
       {
-        className: 'header-nav float-left',
-        fileName: 'header-nav-left.html',
-        when: 'user,hostname=github.com'
-      },
-      {
-        className: 'header-nav user-nav float-right',
-        fileName: 'header-nav-right.html',
+        className: 'js-header-wrapper',
+        fileName: 'header.html',
         when: 'user,hostname=github.com'
       }
     ],
