@@ -111,6 +111,10 @@ input.form-control::-webkit-input-placeholder {
   margin-left: auto;
 }
 
+.github-header .user-nav .avatar {
+  margin-top: 1px!important;
+}
+
 .github-header .header-nav-item {
   margin: 5px 7px!important;
 }
