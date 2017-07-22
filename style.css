@@ -130,3 +130,7 @@ input.form-control::-webkit-input-placeholder {
 .github-header .header-nav-item.create-new a:hover {
   text-decoration: none!important;
 }
+
+.github-header .zh-todo-link {
+  display: none!important;
+}
