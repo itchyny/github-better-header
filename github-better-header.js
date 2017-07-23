@@ -40,7 +40,7 @@
           setting.variables.forEach(function(variable) {
             if (!variable.done && node.getAttribute
               && (node.getAttribute('name') === variable.name
-              ||  node.className === variable.className)) {
+              ||  node.className && node.className.toString().indexOf(variable.className) >= 0)) {
               varpool.set(variable.title, node.getAttribute(variable.attribute));
               variable.done = true;
             }
@@ -104,6 +104,24 @@
         title: 'avatar',
         className: 'avatar',
         attribute: 'src',
+        when: 'user'
+      },
+      {
+        title: 'search_action',
+        className: 'js-site-search-form',
+        attribute: 'action',
+        when: 'user'
+      },
+      {
+        title: 'search_url',
+        className: 'js-site-search-form',
+        attribute: 'data-scoped-search-url',
+        when: 'user'
+      },
+      {
+        title: 'search_scope',
+        className: 'header-search-scope',
+        attribute: 'href',
         when: 'user'
       },
       {
