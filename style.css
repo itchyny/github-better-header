@@ -138,3 +138,7 @@ input.form-control::-webkit-input-placeholder {
 .github-header .zh-todo-link {
   display: none!important;
 }
+
+.border.rounded-1.p-3.my-2 {
+  display: none!important;
+}
