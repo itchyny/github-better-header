@@ -119,12 +119,6 @@
         when: 'user'
       },
       {
-        title: 'search_scope',
-        className: 'header-search-scope',
-        attribute: 'href',
-        when: 'user'
-      },
-      {
         title: 'authenticity_token',
         name: 'authenticity_token',
         attribute: 'value',
