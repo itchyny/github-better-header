@@ -102,7 +102,7 @@
       },
       {
         title: 'avatar',
-        className: 'avatar',
+        className: 'avatar float-left',
         attribute: 'src',
         when: 'user'
       },
