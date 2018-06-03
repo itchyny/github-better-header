@@ -139,6 +139,6 @@ input.form-control::-webkit-input-placeholder {
   display: none!important;
 }
 
-.border.rounded-1.p-3.my-2 {
+.p-3 {
   display: none!important;
 }
