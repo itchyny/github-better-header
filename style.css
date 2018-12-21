@@ -142,3 +142,7 @@ input.form-control::-webkit-input-placeholder {
 .news.column .p-3, .dashboard .news .p-3, .dashboard .Details-content--shown {
   display: none!important;
 }
+
+.notifications .unread {
+  font-weight: 400!important;
+}
