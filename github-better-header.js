@@ -38,7 +38,7 @@
         [].forEach.call(mutation.addedNodes || [], function(node) {
           // we firstly check variables
           setting.variables.forEach(function(variable) {
-            if (!variable.done && node.getAttribute
+            if (!variable.done && node.getAttribute && node.getAttribute(variable.attribute)
               && (node.getAttribute('name') === variable.name
               ||  node.className && node.className.toString().indexOf(variable.className) >= 0)) {
               varpool.set(variable.title, node.getAttribute(variable.attribute));
@@ -102,7 +102,7 @@
       },
       {
         title: 'avatar',
-        className: 'avatar float-left',
+        className: 'avatar',
         attribute: 'src',
         when: 'user'
       },
@@ -115,7 +115,7 @@
       {
         title: 'search_url',
         className: 'js-site-search-form',
-        attribute: 'data-scoped-search-url',
+        attribute: 'data-unscoped-search-url',
         when: 'user'
       },
       {
