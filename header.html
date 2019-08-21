@@ -49,20 +49,28 @@
           </a>
         </li>
         <li class="header-nav-item create-new dropdown js-menu-container">
-          <a class="header-nav-link tooltipped tooltipped-s js-menu-target" href="/new" aria-label="Create new..." data-ga-click="Header, create new, icon:add">
-            <svg class="octicon octicon-plus" width="16" height="16" role="img" version="1.1" viewBox="0 -100 1000 1000" style="margin-right: -5px"><path d="M768 256H448v-320H320V256H0V384h320V704h128v-320h320v-128z"></path></svg>
-            <span class="dropdown-caret"></span>
-          </a>
-          <div class="dropdown-menu-content js-menu-content">
-            <ul class="dropdown-menu dropdown-menu-sw">
-              <a class="dropdown-item" href="/new" data-ga-click="Header, create new repository">
+          <details class="details-overlay details-reset">
+            <summary class="Header-link" aria-label="Create new…" data-ga-click="Header, create new, icon:add" aria-haspopup="menu">
+              <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg> <span class="dropdown-caret"></span>
+            </summary>
+            <details-menu class="dropdown-menu dropdown-menu-sw" role="menu">
+              <a role="menuitem" class="dropdown-item" href="/new" data-ga-click="Header, create new repository">
                 New repository
               </a>
-              <a class="dropdown-item" href="/organizations/new" data-ga-click="Header, create new organization">
+              <a role="menuitem" class="dropdown-item" href="/new/import" data-ga-click="Header, import a repository">
+                Import repository
+              </a>
+              <a role="menuitem" class="dropdown-item" href="https://gist.github.com/" data-ga-click="Header, create new gist">
+                New gist
+              </a>
+              <a role="menuitem" class="dropdown-item" href="/organizations/new" data-ga-click="Header, create new organization">
                 New organization
               </a>
-            </ul>
-          </div>
+              <a role="menuitem" class="dropdown-item" href="/new/project" data-ga-click="Header, create new project">
+                New project
+              </a>
+            </details-menu>
+          </details>
         </li>
         <li class="header-nav-item">
           <span class="js-socket-channel js-updatable-content" data-channel="notification-changed:{{user}}" data-url="/notifications/header">

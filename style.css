@@ -107,6 +107,10 @@ input.form-control::-webkit-input-placeholder {
   display: flex;
 }
 
+.Header-link {
+  color: #24292e!important;
+}
+
 .github-header .user-nav {
   margin-left: auto;
 }
@@ -117,10 +121,6 @@ input.form-control::-webkit-input-placeholder {
 
 .github-header .header-nav-item {
   margin: 5px 7px!important;
-}
-
-.github-header .header-nav-link:hover .dropdown-caret, .github-header .header-nav-link:focus .dropdown-caret {
-    border-top-color: #222222;
 }
 
 .github-header .header-nav-item:first-child {
